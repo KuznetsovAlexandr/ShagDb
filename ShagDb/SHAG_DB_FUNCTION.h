@@ -8,16 +8,16 @@ using namespace std;
 
 void InputStudentInfo(Student *stud)
 {
-	cout << "Ââåäèòå ôàìèëèþ ñòóäåíòà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 	cin >> stud->people.family;
 	cout << endl;
-	cout << "Ââåäèòå èìÿ ñòóäåíòà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 	cin >> stud->people.name;
 	cout << endl;
-	cout << "Ââåäèòå àäðåñ ñòóäåíòà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð´Ñ€ÐµÑ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 	cin >> stud->people.contact.address;
 	cout << endl;
-	cout << "Ââåäèòå òåëåôîí ñòóäåíòà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 	cin >> stud->people.contact.tel;
 	cout << endl;
 }
@@ -25,20 +25,20 @@ void InputStudentVisit(Student *stud, int n)
 {
 	for (int j = 0; j < n; j++)
 	{
-		cout << "Ââåäèòå äàòó ïîñåùåíèÿ çàíÿòèÿ ñòóäåíòîì: " << endl;
-		cout << "Äåíü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ Ð¿Ð¾ÑÐµÑ‰ÐµÐ½Ð¸Ñ Ð·Ð°Ð½ÑÑ‚Ð¸Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð¼: " << endl;
+		cout << "Ð”ÐµÐ½ÑŒ: " << endl;
 		cin >> stud->visit[j].date.day;
 		cout << endl;
-		cout << "Ìåñÿö: " << endl;
+		cout << "ÐœÐµÑÑÑ†: " << endl;
 		cin >> stud->visit[j].date.month;
 		cout << endl;
-		cout << "Ãîä: " << endl;
+		cout << "Ð“Ð¾Ð´: " << endl;
 		cin >> stud->visit[j].date.year;
 		cout << endl;
 
 		do
 		{
-			cout << "Ââåäèòå ñòàòóñ ïîñåùåíèÿ ñòóäåíòà (0 - îòñóòñòâîâàë, 1 - ïðèñóòñòâîâàë, 2 - áîëåë): " << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð°Ñ‚ÑƒÑ Ð¿Ð¾ÑÐµÑ‰ÐµÐ½Ð¸Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° (0 - Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²Ð¾Ð²Ð°Ð», 1 - Ð¿Ñ€Ð¸ÑÑƒÑ‚ÑÑ‚Ð²Ð¾Ð²Ð°Ð», 2 - Ð±Ð¾Ð»ÐµÐ»): " << endl;
 			cin >> stud->visit[j].status;
 			cout << endl;
 		} while (stud->visit[j].status < 0 || stud->visit[j].status > 2);
@@ -49,17 +49,17 @@ void InputStudentAc(Student *stud, int n)
 {
 	for (int j = 0; j < n; j++)
 	{
-		cout << "Ââåäèòå äàòó ïîëó÷åííîé îöåíêè çà ðàáîòó â êëàññå ñòóäåíòà: " << endl;
-		cout << "Äåíü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ð¾Ð¹ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ Ð² ÐºÐ»Ð°ÑÑÐµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
+		cout << "Ð”ÐµÐ½ÑŒ: " << endl;
 		cin >> stud->ac_perf[j].date.day;
 		cout << endl;
-		cout << "Ìåñÿö: " << endl;
+		cout << "ÐœÐµÑÑÑ†: " << endl;
 		cin >> stud->ac_perf[j].date.month;
 		cout << endl;
-		cout << "Ãîä: " << endl;
+		cout << "Ð“Ð¾Ð´: " << endl;
 		cin >> stud->ac_perf[j].date.year;
 		cout << endl;
-		cout << "Ââåäèòå îöåíêó ñòóäåíòà çà ðàáîòó â êëàññå: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÑƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð·Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ Ð² ÐºÐ»Ð°ÑÑÐµ: " << endl;
 		cin >> stud->ac_perf[j].ac_status;
 		cout << endl;
 	}
@@ -68,17 +68,17 @@ void InputStudentAcHome(Student *stud, int n)
 {
 	for (int j = 0; j < n; j++)
 	{
-		cout << "Ââåäèòå äàòó îöåíêè çà äîìàøíþþ ðàáîòó ñòóäåíòà: " << endl;
-		cout << "Äåíü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ð´Ð¾Ð¼Ð°ÑˆÐ½ÑŽÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
+		cout << "Ð”ÐµÐ½ÑŒ: " << endl;
 		cin >> stud->homework[j].date.day;
 		cout << endl;
-		cout << "Ìåñÿö: " << endl;
+		cout << "ÐœÐµÑÑÑ†: " << endl;
 		cin >> stud->homework[j].date.month;
 		cout << endl;
-		cout << "Ãîä: " << endl;
+		cout << "Ð“Ð¾Ð´: " << endl;
 		cin >> stud->homework[j].date.year;
 		cout << endl;
-		cout << "Ââåäèòå îöåíêó çà äîìàøíþþ ðàáîòó ñòóäåíòà: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÑƒ Ð·Ð° Ð´Ð¾Ð¼Ð°ÑˆÐ½ÑŽÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 		cin >> stud->homework[j].ac_status;
 		cout << endl;
 	}
@@ -87,17 +87,17 @@ void InputStudentAcLab(Student *stud, int n)
 {
 	for (int j = 0; j < n; j++)
 	{
-		cout << "Ââåäèòå äàòó îöåíêè çà ëàáîðàòîðíóþ ðàáîòó ñòóäåíòà: " << endl;
-		cout << "Äåíü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ð»Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
+		cout << "Ð”ÐµÐ½ÑŒ: " << endl;
 		cin >> stud->lab[j].date.day;
 		cout << endl;
-		cout << "Ìåñÿö: " << endl;
+		cout << "ÐœÐµÑÑÑ†: " << endl;
 		cin >> stud->lab[j].date.month;
 		cout << endl;
-		cout << "Ãîä: " << endl;
+		cout << "Ð“Ð¾Ð´: " << endl;
 		cin >> stud->lab[j].date.year;
 		cout << endl;
-		cout << "Ââåäèòå îöåíêó çà ëàáîðàòîðíóþ ðàáîòó ñòóäåíòà: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÑƒ Ð·Ð° Ð»Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 		cin >> stud->lab[j].ac_status;
 		cout << endl;
 	}
@@ -106,17 +106,17 @@ void InputStudentAcTest(Student *stud, int n)
 {
 	for (int j = 0; j < n; j++)
 	{
-		cout << "Ââåäèòå äàòó îöåíêè çà êîíòðîëüíóþ ðàáîòó ñòóäåíòà: " << endl;
-		cout << "Äåíü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ñ‚Ñƒ Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»ÑŒÐ½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
+		cout << "Ð”ÐµÐ½ÑŒ: " << endl;
 		cin >> stud->test[j].date.day;
 		cout << endl;
-		cout << "Ìåñÿö: " << endl;
+		cout << "ÐœÐµÑÑÑ†: " << endl;
 		cin >> stud->test[j].date.month;
 		cout << endl;
-		cout << "Ãîä: " << endl;
+		cout << "Ð“Ð¾Ð´: " << endl;
 		cin >> stud->test[j].date.year;
 		cout << endl;
-		cout << "Ââåäèòå îöåíêó çà êîíòðîëüíóþ ðàáîòó ñòóäåíòà: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÑƒ Ð·Ð° ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»ÑŒÐ½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 		cin >> stud->test[j].ac_status;
 		cout << endl;
 	}
@@ -167,10 +167,10 @@ void InputStudentAcperf(Student *stud, int m)
 
 void InputStudentFacultet(Student *stud)
 {
-	cout << "Ââåäèòå íàçâàíèå ôàêóëüòåòà ñòóäåíòà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ„Ð°ÐºÑƒÐ»ÑŒÑ‚ÐµÑ‚Ð° ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 	cin >> stud->facult.name;
 	cout << endl;
-	cout << "Ââåäèòå íàçâàíèå ãðóïïû ñòóäåíòà: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << endl;
 	cin >> stud->facult.group;
 	cout << endl;
 
@@ -179,54 +179,54 @@ void InputStudentFacultet(Student *stud)
 }
 void OtputStudentInfo(Student *stud)
 {
-	cout << "Íîìåð ñòóäåíòà: " << stud->id << endl;
-	cout << "Ôàìèëèÿ ñòóäåíòà: " << stud->people.family << endl;
-	cout << "Èìÿ ñòóäåíòà: " << stud->people.name << endl;
-	cout << "Àäðåñ ñòóäåíòà: " << stud->people.contact.address << endl;
-	cout << "Òåëåôîí ñòóäåíòà: " << "+7 " << stud->people.contact.tel << endl;
-	cout << "Ôàêóëüòåò ñòóäåíòà: " << stud->facult.name << endl;
-	cout << "Íîìåð ãðóïïû ñòóäåíòà: " << stud->facult.group << endl;
+	cout << "ÐÐ¾Ð¼ÐµÑ€ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->id << endl;
+	cout << "Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->people.family << endl;
+	cout << "Ð˜Ð¼Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->people.name << endl;
+	cout << "ÐÐ´Ñ€ÐµÑ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->people.contact.address << endl;
+	cout << "Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << "+7 " << stud->people.contact.tel << endl;
+	cout << "Ð¤Ð°ÐºÑƒÐ»ÑŒÑ‚ÐµÑ‚ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->facult.name << endl;
+	cout << "ÐÐ¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->facult.group << endl;
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Äàòà ïîñåùåíèÿ ñòóäåíòà: " << stud->visit[j].date.day << "." << stud->visit[j].date.month << "." << stud->visit[j].date.year << endl;
+		cout << "Ð”Ð°Ñ‚Ð° Ð¿Ð¾ÑÐµÑ‰ÐµÐ½Ð¸Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->visit[j].date.day << "." << stud->visit[j].date.month << "." << stud->visit[j].date.year << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Ñòàòóñ ïîñåùåíèÿ ñòóäåíòà (0 - îòñóòñòâîâàë, 1 - ïðèñóòñòâîâàë, 2 - áîëåë): " << stud->visit[j].status << endl;
+		cout << "Ð¡Ñ‚Ð°Ñ‚ÑƒÑ Ð¿Ð¾ÑÐµÑ‰ÐµÐ½Ð¸Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° (0 - Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²Ð¾Ð²Ð°Ð», 1 - Ð¿Ñ€Ð¸ÑÑƒÑ‚ÑÑ‚Ð²Ð¾Ð²Ð°Ð», 2 - Ð±Ð¾Ð»ÐµÐ»): " << stud->visit[j].status << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Äàòà îöåíêè çà ðàáîòó â êëàññå: " << stud->ac_perf[j].date.day << "." << stud->ac_perf[j].date.month << "." << stud->ac_perf[j].date.year << endl;
+		cout << "Ð”Ð°Ñ‚Ð° Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ Ð² ÐºÐ»Ð°ÑÑÐµ: " << stud->ac_perf[j].date.day << "." << stud->ac_perf[j].date.month << "." << stud->ac_perf[j].date.year << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Îöåíêà ñòóäåíòà çà ðàáîòó â êëàññå: " << stud->ac_perf[j].ac_status << endl;
+		cout << "ÐžÑ†ÐµÐ½ÐºÐ° ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð·Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ Ð² ÐºÐ»Ð°ÑÑÐµ: " << stud->ac_perf[j].ac_status << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Äàòà îöåíêè çà äîìàøíþþ ðàáîòó ñòóäåíòà: " << stud->homework[j].date.day << "." << stud->homework[j].date.month << "." << stud->homework[j].date.year << endl;
+		cout << "Ð”Ð°Ñ‚Ð° Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ð´Ð¾Ð¼Ð°ÑˆÐ½ÑŽÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->homework[j].date.day << "." << stud->homework[j].date.month << "." << stud->homework[j].date.year << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Îöåíêà çà äîìàøíþþ ðàáîòó ñòóäåíòà: " << stud->homework[j].ac_status << endl;
+		cout << "ÐžÑ†ÐµÐ½ÐºÐ° Ð·Ð° Ð´Ð¾Ð¼Ð°ÑˆÐ½ÑŽÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->homework[j].ac_status << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Äàòà îöåíêè çà ëàáîðàòîðíóþ ðàáîòó ñòóäåíòà: " << stud->lab[j].date.day << "." << stud->lab[j].date.month << "." << stud->lab[j].date.year << endl;
+		cout << "Ð”Ð°Ñ‚Ð° Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° Ð»Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->lab[j].date.day << "." << stud->lab[j].date.month << "." << stud->lab[j].date.year << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Îöåíêà çà ëàáîðàòîðíóþ ðàáîòó ñòóäåíòà: " << stud->lab[j].ac_status << endl;
+		cout << "ÐžÑ†ÐµÐ½ÐºÐ° Ð·Ð° Ð»Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->lab[j].ac_status << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Äàòà îöåíêè çà êîíòðîëüíóþ ðàáîòó ñòóäåíòà: " << stud->test[j].date.day << "." << stud->test[j].date.month << "." << stud->test[j].date.year << endl;
+		cout << "Ð”Ð°Ñ‚Ð° Ð¾Ñ†ÐµÐ½ÐºÐ¸ Ð·Ð° ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»ÑŒÐ½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->test[j].date.day << "." << stud->test[j].date.month << "." << stud->test[j].date.year << endl;
 	}
 	for (int j = 0; j < N; j++)
 	{
-		cout << "Îöåíêà çà êîíòðîëüíóþ ðàáîòó ñòóäåíòà: " << stud->test[j].ac_status << endl;
+		cout << "ÐžÑ†ÐµÐ½ÐºÐ° Ð·Ð° ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»ÑŒÐ½ÑƒÑŽ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->test[j].ac_status << endl;
 	}
-	cout << "Ñðåäíÿÿ îöåíêà ñòóäåíòà: " << stud->middle_ac << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÑÑ Ð¾Ñ†ÐµÐ½ÐºÐ° ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: " << stud->middle_ac << endl;
 	cout << endl;
 }
 
